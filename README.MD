@@ -4,6 +4,10 @@ An example of building a Chatbot with the Open AI API.
 
 If you like this project, please star this repo and [support my work](https://www.codecapers.com.au/about#support-my-work)
 
+## Original UI code
+
+https://tailwindcomponents.com/component/ai-chatbot
+
 ## Setup
 
 You need [Node.js](https://nodejs.org/en/) installed to use this code.

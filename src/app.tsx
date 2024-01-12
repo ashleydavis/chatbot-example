@@ -18,10 +18,11 @@ const openai = new OpenAI({
 export function App() {
 
     const threadId = useRef<string | undefined>(undefined);
-    const scrollContainer = useRef<HTMLDivElement>();
+    const scrollContainer = useRef<HTMLDivElement>(null);
     const [runId, setRunId] = useState<string | undefined>(undefined);
     const [messages, setMessages] = useState<ThreadMessage[]>([]);
     const [message, setMessage] = useState<string>("");
+    const [chatbotVisible, setChatbotVisible] = useState<boolean>(true);
 
     //
     // Creates a new message thread, if there isn't one already.
@@ -152,9 +153,16 @@ export function App() {
 
     }, [runId]);
 
+    //
+    // Toggles visibility of the chatbot.
+    //
+    function onToggleChatbot() {
+        setChatbotVisible(!chatbotVisible);
+    }
+
     return (
         <div>
-            <div
+            {chatbotVisible && <div
                 style={{"boxShadow":"0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)"}}
                 className="fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[440px] h-[634px]"
                 >
@@ -263,7 +271,20 @@ export function App() {
 
                     </div>
                 </div>
-            </div>
+            </div>}
+
+            <button
+                className="fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-black hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
+                type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed"
+                onClick={onToggleChatbot}
+                >
+                <svg xmlns=" http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                    className="text-white block border-gray-200 align-middle">
+                    <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" className="border-gray-200">
+                    </path>
+                </svg>
+            </button>
 
             <pre>
                 {JSON.stringify(messages, null, 4)}
