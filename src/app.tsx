@@ -159,7 +159,7 @@ export function App() {
                 </div>
 
                 {/* <!-- Chat Container --> */}
-                <div className="pr-4 h-[474px]" style={{"minWidth":"100%","display":"table"}}>
+                <div className="overflow-y-auto mb-6 pr-4 h-[460px]">
                     {/* <!-- Chat Message AI --> */}
                     <div className="flex gap-3 my-4 text-gray-600 text-sm flex-1">
                         <span className="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
