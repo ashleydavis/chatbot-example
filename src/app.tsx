@@ -18,6 +18,7 @@ const openai = new OpenAI({
 export function App() {
 
     const threadId = useRef<string | undefined>(undefined);
+    const scrollContainer = useRef<HTMLDivElement>();
     const [runId, setRunId] = useState<string | undefined>(undefined);
     const [messages, setMessages] = useState<ThreadMessage[]>([]);
     const [message, setMessage] = useState<string>("");
@@ -85,6 +86,11 @@ export function App() {
             // The run has finished.
             setRunId(undefined);
         }
+
+        //
+        // Scroll to the end.
+        //
+        scrollContainer.current!.scrollTop = scrollContainer.current!.scrollHeight;
     }
 
     //
@@ -160,7 +166,10 @@ export function App() {
                 </div>
 
                 {/* <!-- Chat Container --> */}
-                <div className="overflow-y-auto mb-6 pr-4 h-[460px]">
+                <div 
+                    ref={scrollContainer}
+                    className="overflow-y-auto mb-6 pr-4 h-[460px]"
+                    >
                     {/* <!-- Chat Message AI --> */}
                     <div className="flex gap-3 my-4 text-gray-600 text-sm flex-1">
                         <span className="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
