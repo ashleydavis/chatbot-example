@@ -1,6 +1,6 @@
-# Frontend example with Parcel, React and Less
+# Chatbot example
 
-This is the simplest possible example of a frontend built with TypeScript and React and bundled with Parcel (v2).
+An example of building a Chatbot with the Open AI API.
 
 If you like this project, please star this repo and [support my work](https://www.codecapers.com.au/about#support-my-work)
 
