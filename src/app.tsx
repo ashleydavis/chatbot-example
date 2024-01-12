@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import OpenAI from "openai";
 import { ThreadMessage } from "openai/resources/beta/threads/messages/messages";
 
@@ -17,8 +17,9 @@ const openai = new OpenAI({
 export function App() {
 
     const threadId = useRef<string | undefined>(undefined);
-    const [messages, setMessages] = React.useState<ThreadMessage[]>([]);
-    const [message, setMessage] = React.useState<string>("");
+    const [runId, setRunId] = useState<string | undefined>(undefined);
+    const [messages, setMessages] = useState<ThreadMessage[]>([]);
+    const [message, setMessage] = useState<string>("");
 
     //
     // Creates a new message thread, if there isn't one already.
@@ -40,7 +41,12 @@ export function App() {
     // Adds a message to the chat.
     //
     async function sendMessage(text: string): Promise<void> {
-        const message = await openai.beta.threads.messages.create(
+        if (runId !== undefined) {
+            // Already running.
+            return;
+        }
+
+        await openai.beta.threads.messages.create(
             threadId.current!,
             {
               role: "user",
@@ -54,7 +60,7 @@ export function App() {
                 assistant_id: assistantId,
             }
         );
-        console.log(run);
+        setRunId(run.id);
     }
 
     //
@@ -72,6 +78,12 @@ export function App() {
         const messages = await openai.beta.threads.messages.list(threadId.current!);
         messages.data.reverse(); // Reverse so the newest messages are at the bottom.
         setMessages(messages.data);
+
+        const run = await openai.beta.threads.runs.retrieve(threadId.current!, runId!);
+        if (run.status === "completed") {
+            // The run has finished.
+            setRunId(undefined);
+        }
     }
 
     //
@@ -80,9 +92,11 @@ export function App() {
     function getRoleName(role: string): string {
         if (role === "user") {
             return "You";
-        } else if (role === "assistant") {
+        } 
+        else if (role === "assistant") {
             return "AI";
-        } else {
+        } 
+        else {
             return role;
         }
     }
@@ -113,6 +127,13 @@ export function App() {
                 console.error(`Failed to create message thread.`);
                 console.error(err);
             });
+    }, []);
+
+    useEffect(() => {
+
+        if (runId === undefined) {
+            return;
+        }
 
         const timer = setInterval(() => {
             updateMessages();
@@ -121,7 +142,8 @@ export function App() {
         return () => {
             clearInterval(timer);
         };
-    }, []);
+
+    }, [runId]);
 
     return (
         <div>
@@ -212,11 +234,13 @@ export function App() {
                             placeholder="Example: Why would I want to employ Ashley?" 
                             value={message}
                             onChange={e => setMessage(e.target.value)}
+                            disabled={runId !== undefined}
                             />
 
                         <button
                             className="inline-flex items-center justify-center rounded-md text-sm font-medium text-[#f9fafb] disabled:pointer-events-none disabled:opacity-50 bg-black hover:bg-[#111827E6] h-10 px-4 py-2"
                             onClick={onSendMessage}
+                            disabled={runId !== undefined}
                             >
                             Send
                         </button>
