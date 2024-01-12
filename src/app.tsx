@@ -87,6 +87,26 @@ export function App() {
         }
     }
 
+    //
+    // Render a chunk of text as paragraphs.
+    //
+    function renderText(text: string, role: string) {
+        return text.split("\n").map((line, index) => {
+            return (
+                <p key={index} className="leading-relaxed">
+                    {index === 0 
+                        && <span 
+                            className="block font-bold text-gray-700"
+                            >
+                            {getRoleName(role)}
+                        </span>
+                    }
+                    {line}
+                </p>
+            );
+        });
+    }
+
     useEffect(() => {
         createThread()
             .catch(err => {
@@ -112,8 +132,8 @@ export function App() {
 
                 {/* <!-- Heading --> */}
                 <div className="flex flex-col space-y-1.5 pb-6">
-                    <h2 className="font-semibold text-lg tracking-tight">Chatbot</h2>
-                    <p className="text-sm text-[#6b7280] leading-3">Powered by Mendable and Vercel</p>
+                    <h2 className="font-semibold text-lg tracking-tight">An example chatbot</h2>
+                    <p className="text-sm text-[#6b7280] leading-3">Powered by Open AI and the resume of Ashley Davis</p>
                 </div>
 
                 {/* <!-- Chat Container --> */}
@@ -167,18 +187,16 @@ export function App() {
                                     </div>
                                 </span>
                                 
-                                {message.content.map((content, index) => {
-                                    if (content.type === "text") {
-                                        return (
-                                            <p key={index} className="leading-relaxed">
-                                                <span className="block font-bold text-gray-700">{getRoleName(message.role)} </span>{content.text.value}
-                                            </p>
-                                        );
-                                    }
-                                    else {
-                                        return undefined;
-                                    }
-                                })}
+                                <div className="flex flex-col">
+                                    {message.content.map((content, index) => {
+                                        if (content.type === "text") {
+                                            return renderText(content.text.value, message.role);
+                                        }
+                                        else {
+                                            return undefined;
+                                        }
+                                    })}
+                                </div>
                                 
                             </div>       
                         );
