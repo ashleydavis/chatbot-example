@@ -1,0 +1,31 @@
+{
+    "name": "react-parcel-example",
+    "version": "1.0.0",
+    "description": "",
+    "source": "src/index.html",
+    "scripts": {
+        "start": "parcel",
+        "s": "pnpm run start",
+        "build": "parcel build",
+        "b": "pnpm run build",
+        "clean": "rm -rf dist .parcel-cache tsconfig.tsbuildinfo",
+        "compile": "tsc --incremental",
+        "c": "pnpm run compile"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@parcel/transformer-less": "^2.10.3",
+        "@types/react": "^18.2.45",
+        "@types/react-dom": "^18.2.18",
+        "live-server": "^1.2.2",
+        "parcel": "^2.10.3",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "process": "^0.11.10",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}

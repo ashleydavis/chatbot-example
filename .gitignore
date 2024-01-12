@@ -1,0 +1,7 @@
+tsconfig.tsbuildinfo
+build/
+﻿.parcel-cache
+node_modules
+dist
+*.bak
+.parcel-cache
