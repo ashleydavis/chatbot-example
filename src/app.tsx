@@ -154,7 +154,7 @@ export function App() {
 
                 {/* <!-- Heading --> */}
                 <div className="flex flex-col space-y-1.5 pb-6">
-                    <h2 className="font-semibold text-lg tracking-tight">An example chatbot</h2>
+                    <h2 className="font-semibold text-lg tracking-tight">Ask questions about Ashley Davis</h2>
                     <p className="text-sm text-[#6b7280] leading-3">Powered by Open AI and the resume of Ashley Davis</p>
                 </div>
 
@@ -224,6 +224,12 @@ export function App() {
                         );
                     })}
 
+                    {/* Cool progress indicators: https://loading.io/css/ */}
+                    {runId !== undefined
+                        && <div className="lds-ring">
+                            <div></div><div></div><div></div><div></div>
+                        </div>
+                    }
                 </div>
 
                 {/* <!-- Input box  --> */}
