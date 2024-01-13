@@ -175,8 +175,12 @@ export function App() {
     return (
         <div>
             {chatbotVisible && <div
-                style={{"boxShadow":"0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)"}}
-                className="fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[440px] h-[634px]"
+                style={{
+                    boxShadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)",
+                    maxHeight: "80%",
+                    maxWidth: "80%",
+                }}
+                className="flex flex-col fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[440px] h-[634px]"
                 >
 
                 {/* <!-- Heading --> */}
@@ -188,7 +192,7 @@ export function App() {
                 {/* <!-- Chat Container --> */}
                 <div 
                     ref={scrollContainer}
-                    className="overflow-y-auto mb-6 pr-4 h-[420px]"
+                    className="flex-grow overflow-y-auto mb-6 pr-4"
                     >
                     {/* <!-- Chat Message AI --> */}
                     <div className="flex gap-3 my-4 text-gray-600 text-sm flex-1">
@@ -286,7 +290,7 @@ export function App() {
                         </div>
                     </div>
 
-                    <div className="text-sm ml-3 py-2.5 text-gray-500">
+                    <div className="text-sm ml-3 pt-3 pr-1 text-gray-500">
                         Example: Why would I want to employ Ashley?                    
                     </div>
                 </div>

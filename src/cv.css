@@ -53,7 +53,6 @@ ul.lst-kix_jasfo943ld45-0 {
 }
 
 li.li-bullet-0:before {
-    margin-left: -18pt;
     white-space: nowrap;
     display: inline-block;
     min-width: 18pt
@@ -64,9 +63,7 @@ ul.lst-kix_q43nwmkvrt8-0 {
 }
 
 .c5 {
-    margin-left: 36pt;
     padding-top: 10pt;
-    text-indent: -18pt;
     padding-bottom: 0pt;
     line-height: 1.0;
     orphans: 2;
@@ -75,7 +72,6 @@ ul.lst-kix_q43nwmkvrt8-0 {
 }
 
 .c2 {
-    margin-left: 36pt;
     padding-top: 4pt;
     padding-left: 0pt;
     padding-bottom: 0pt;
@@ -86,9 +82,7 @@ ul.lst-kix_q43nwmkvrt8-0 {
 }
 
 .c12 {
-    margin-left: 36pt;
     padding-top: 4pt;
-    text-indent: -18pt;
     padding-bottom: 0pt;
     line-height: 1.0;
     orphans: 2;
@@ -97,9 +91,7 @@ ul.lst-kix_q43nwmkvrt8-0 {
 }
 
 .c13 {
-    margin-left: 36pt;
     padding-top: 4pt;
-    text-indent: -18pt;
     padding-bottom: 0pt;
     line-height: 1.2;
     orphans: 2;
@@ -119,7 +111,6 @@ ul.lst-kix_q43nwmkvrt8-0 {
 }
 
 .c9 {
-    margin-left: 36pt;
     padding-top: 4pt;
     padding-left: 0pt;
     padding-bottom: 0pt;
@@ -150,27 +141,21 @@ ul.lst-kix_q43nwmkvrt8-0 {
 }
 
 .c8 {
-    margin-left: 36pt;
     padding-top: 24pt;
-    text-indent: -18pt;
     padding-bottom: 10pt;
     line-height: 1.0;
     text-align: left
 }
 
 .c29 {
-    margin-left: 36pt;
     padding-top: 0pt;
-    text-indent: -18pt;
     padding-bottom: 0pt;
     line-height: 1.0;
     text-align: left
 }
 
 .c31 {
-    margin-left: 36pt;
     padding-top: 6pt;
-    text-indent: -18pt;
     padding-bottom: 0pt;
     line-height: 1.0;
     text-align: left
@@ -238,6 +223,7 @@ ul.lst-kix_q43nwmkvrt8-0 {
     max-width: 600pt;
     margin-left: auto;
     margin-right: auto;
+    padding: 18px;
 }
 
 .c26 {
