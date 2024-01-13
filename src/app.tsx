@@ -70,8 +70,9 @@ export function App() {
     // Sends the message the user has typed to the AI.
     //
     async function onSendMessage(): Promise<void> {
-        await sendMessage(message);
+        const messageToSend = message.trim();
         setMessage(""); // Clear for the next message.
+        await sendMessage(messageToSend);
     }
 
     //
@@ -159,6 +160,16 @@ export function App() {
     function onToggleChatbot() {
         setChatbotVisible(!chatbotVisible);
     }
+
+    //
+    // Handles the enter key.
+    //
+    async function onKeyDown(event: React.KeyboardEvent<HTMLInputElement>): Promise<void> {
+        if (event.key === "Enter") {
+            // Send message on enter.
+            await onSendMessage();
+        }
+    };
 
     return (
         <div>
@@ -260,6 +271,7 @@ export function App() {
                                 value={message}
                                 onChange={e => setMessage(e.target.value)}
                                 disabled={runId !== undefined}
+                                onKeyDown={onKeyDown}
                                 />
 
                             <button
