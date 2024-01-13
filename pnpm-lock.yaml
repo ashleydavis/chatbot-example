@@ -4,54 +4,56 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  markdown-to-jsx:
-    specifier: ^7.4.0
-    version: 7.4.0(react@18.2.0)
-  openai:
-    specifier: ^4.24.4
-    version: 4.24.4
-  process:
-    specifier: ^0.11.10
-    version: 0.11.10
-  react:
-    specifier: ^18.2.0
-    version: 18.2.0
-  react-dom:
-    specifier: ^18.2.0
-    version: 18.2.0(react@18.2.0)
+importers:
 
-devDependencies:
-  '@parcel/transformer-inline-string':
-    specifier: 2.10.3
-    version: 2.10.3(@parcel/core@2.10.3)
-  '@types/node':
-    specifier: ^20.11.0
-    version: 20.11.0
-  '@types/react':
-    specifier: ^18.2.45
-    version: 18.2.45
-  '@types/react-dom':
-    specifier: ^18.2.18
-    version: 18.2.18
-  buffer:
-    specifier: ^5.5.0||^6.0.0
-    version: 6.0.3
-  live-server:
-    specifier: ^1.2.2
-    version: 1.2.2
-  parcel:
-    specifier: ^2.10.3
-    version: 2.10.3(postcss@8.4.33)(typescript@5.3.3)
-  postcss:
-    specifier: ^8.4.33
-    version: 8.4.33
-  tailwindcss:
-    specifier: ^3.4.1
-    version: 3.4.1
-  typescript:
-    specifier: ^5.3.3
-    version: 5.3.3
+  frontend:
+    dependencies:
+      markdown-to-jsx:
+        specifier: ^7.4.0
+        version: 7.4.0(react@18.2.0)
+      openai:
+        specifier: ^4.24.4
+        version: 4.24.4
+      process:
+        specifier: ^0.11.10
+        version: 0.11.10
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@parcel/transformer-inline-string':
+        specifier: 2.10.3
+        version: 2.10.3(@parcel/core@2.10.3)
+      '@types/node':
+        specifier: ^20.11.0
+        version: 20.11.0
+      '@types/react':
+        specifier: ^18.2.45
+        version: 18.2.45
+      '@types/react-dom':
+        specifier: ^18.2.18
+        version: 18.2.18
+      buffer:
+        specifier: ^5.5.0||^6.0.0
+        version: 6.0.3
+      live-server:
+        specifier: ^1.2.2
+        version: 1.2.2
+      parcel:
+        specifier: ^2.10.3
+        version: 2.10.3(postcss@8.4.33)(typescript@5.3.3)
+      postcss:
+        specifier: ^8.4.33
+        version: 8.4.33
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.1
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
 
 packages:
 
