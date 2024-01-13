@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import OpenAI from "openai";
 import { ThreadMessage } from "openai/resources/beta/threads/messages/messages";
 import Markdown from 'markdown-to-jsx';
+import cv from "bundle-text:./cv.md";
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) {
@@ -304,9 +305,9 @@ export function App() {
                 </svg>
             </button>
 
-            <pre>
-                {JSON.stringify(messages, null, 4)}
-            </pre>
+            <Markdown>
+                {cv}
+            </Markdown>
         </div>
     );
 }
