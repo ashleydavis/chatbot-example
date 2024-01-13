@@ -188,7 +188,7 @@ export function App() {
                 {/* <!-- Chat Container --> */}
                 <div 
                     ref={scrollContainer}
-                    className="overflow-y-auto mb-6 pr-4 h-[435px]"
+                    className="overflow-y-auto mb-6 pr-4 h-[420px]"
                     >
                     {/* <!-- Chat Message AI --> */}
                     <div className="flex gap-3 my-4 text-gray-600 text-sm flex-1">
@@ -286,7 +286,7 @@ export function App() {
                         </div>
                     </div>
 
-                    <div className="text-sm ml-3 py-2 text-gray-500">
+                    <div className="text-sm ml-3 py-2.5 text-gray-500">
                         Example: Why would I want to employ Ashley?                    
                     </div>
                 </div>
