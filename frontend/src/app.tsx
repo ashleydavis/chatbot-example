@@ -1,20 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import OpenAI from "openai";
 import { ThreadMessage } from "openai/resources/beta/threads/messages/messages";
 import Markdown from 'markdown-to-jsx';
 import { Cv } from "./cv";
+import axios from "axios";
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-if (!OPENAI_API_KEY) {
-    throw new Error("Missing OPENAI_API_KEY environment variable.");
+const BASE_URL = process.env.BASE_URL;
+if (!BASE_URL) {
+    throw new Error("Missing BASE_URL environment variable.");
 }
-
-const assistantId = "asst_zb0rRLupSak9wg7yDHMZ8iHU"
-
-const openai = new OpenAI({
-    apiKey: OPENAI_API_KEY,
-    dangerouslyAllowBrowser: true,
-});
 
 export function App() {
 
@@ -34,10 +27,12 @@ export function App() {
             return; 
         }
 
-        // Create a new thread.
-        const thread = await openai.beta.threads.create()
+        //
+        // Requests a new thread from the backend.
+        //
+        const { data } = await axios.post(`${BASE_URL}/chat/new`);
+        threadId.current = data.threadId;
 
-        threadId.current = thread.id;
         console.log(`Created thread ${threadId.current}.`);
     }
 
@@ -50,21 +45,15 @@ export function App() {
             return;
         }
 
-        await openai.beta.threads.messages.create(
-            threadId.current!,
-            {
-              role: "user",
-              content: text,
-            }
-        );
-    
-        const run = await openai.beta.threads.runs.create(
-            threadId.current!,
-            { 
-                assistant_id: assistantId,
-            }
-        );
-        setRunId(run.id);
+        //
+        // Sends the message to the backend.
+        //
+        const { data } = await axios.post(`${BASE_URL}/chat/send`, {
+            threadId: threadId.current,
+            text,
+        });
+
+        setRunId(data.runId);
     }
 
     //
@@ -80,12 +69,20 @@ export function App() {
     // Updates messages in the UI.
     //
     async function updateMessages(): Promise<void> {
-        const messages = await openai.beta.threads.messages.list(threadId.current!);
-        messages.data.reverse(); // Reverse so the newest messages are at the bottom.
-        setMessages(messages.data);
 
-        const run = await openai.beta.threads.runs.retrieve(threadId.current!, runId!);
-        if (run.status === "completed") {
+        //todo: GET /chat/list 
+
+        const { data } = await axios.post(`${BASE_URL}/chat/list`, {
+            threadId: threadId.current,
+            runId: runId!,
+        });
+
+        const { messages, status } = data;
+        
+        messages.reverse(); // Reverse so the newest messages are at the bottom.
+        setMessages(messages);
+
+        if (status === "completed") {
             // The run has finished.
             setRunId(undefined);
         }

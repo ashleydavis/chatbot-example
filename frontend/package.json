@@ -1,11 +1,13 @@
 {
-    "name": "react-parcel-example",
+    "name": "chatbot-example-frontend",
     "version": "1.0.0",
     "description": "",
     "source": "src/index.html",
     "scripts": {
         "start": "parcel",
         "s": "pnpm run start",
+        "dev": "cross-env BASE_URL=http://localhost:3000 parcel",
+        "d": "pnpm run dev",
         "build": "parcel build",
         "b": "pnpm run build",
         "clean": "rm -rf dist .parcel-cache tsconfig.tsbuildinfo",
@@ -13,24 +15,26 @@
         "c": "pnpm run compile"
     },
     "keywords": [],
-    "author": "",
+    "author": "ashley@codecapers.com.au",
     "license": "ISC",
     "devDependencies": {
         "@parcel/transformer-inline-string": "2.10.3",
         "@types/node": "^20.11.0",
         "@types/react": "^18.2.45",
         "@types/react-dom": "^18.2.18",
-        "buffer": "^5.5.0||^6.0.0",
+        "buffer": "^6.0.3",
+        "cross-env": "^7.0.3",
         "live-server": "^1.2.2",
         "parcel": "^2.10.3",
         "postcss": "^8.4.33",
+        "process": "^0.11.10",
         "tailwindcss": "^3.4.1",
         "typescript": "^5.3.3"
     },
     "dependencies": {
+        "axios": "^1.6.5",
         "markdown-to-jsx": "^7.4.0",
         "openai": "^4.24.4",
-        "process": "^0.11.10",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     }
