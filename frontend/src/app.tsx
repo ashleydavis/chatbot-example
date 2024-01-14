@@ -32,8 +32,6 @@ export function App() {
         //
         const { data } = await axios.post(`${BASE_URL}/chat/new`);
         threadId.current = data.threadId;
-
-        console.log(`Created thread ${threadId.current}.`);
     }
 
     //
@@ -81,14 +79,11 @@ export function App() {
         setMessages(messages);
 
         if (status === "completed") {
-            // The run has finished.
-            setRunId(undefined);
+            setTimeout(() => {
+                // The run has finished.
+                setRunId(undefined);
+            }, 5000); // Give it some time to finish up.
         }
-
-        //
-        // Scroll to the end.
-        //
-        scrollContainer.current!.scrollTop = scrollContainer.current!.scrollHeight;
     }
 
     //
@@ -149,6 +144,14 @@ export function App() {
         };
 
     }, [runId]);
+
+    useEffect(() => {
+        //
+        // Scroll to the end.
+        //
+        scrollContainer.current!.scrollTop = scrollContainer.current!.scrollHeight;
+
+    }, [messages]);
 
     //
     // Toggles visibility of the chatbot.
@@ -286,7 +289,7 @@ export function App() {
                     </div>
 
                     <div className="text-sm ml-3 pt-3 pr-1 text-gray-500">
-                        Example: Why would I want to employ Ashley?                    
+                        Example: What is Ashley's skillset?
                     </div>
                 </div>
             </div>}
