@@ -70,8 +70,6 @@ export function App() {
     //
     async function updateMessages(): Promise<void> {
 
-        //todo: GET /chat/list 
-
         const { data } = await axios.post(`${BASE_URL}/chat/list`, {
             threadId: threadId.current,
             runId: runId!,
