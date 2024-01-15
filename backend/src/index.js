@@ -84,7 +84,12 @@ app.post(`/chat/list`, async (req, res) => {
     const { threadId, runId } = req.body;
 
     const messages = await openai.beta.threads.messages.list(threadId);
-    const run = await openai.beta.threads.runs.retrieve(threadId, runId);
+
+    let status = undefined;
+    if (runId) {
+        const run = await openai.beta.threads.runs.retrieve(threadId, runId);
+        status = run.status;
+    }   
 
     await db.collection("threads").updateOne(
         { _id: threadId },
@@ -92,7 +97,7 @@ app.post(`/chat/list`, async (req, res) => {
             $set: {
                 updateDate: new Date(),
                 messages: messages,
-                status: run.status,
+                status,
                 ip: req.clientIp,
             },
             $setOnInsert: {
@@ -104,7 +109,7 @@ app.post(`/chat/list`, async (req, res) => {
 
     res.json({
         messages: messages.data,
-        status: run.status,
+        status,
     });
 });
 

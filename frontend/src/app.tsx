@@ -26,6 +26,19 @@ export function App() {
     // Creates a new message thread, if there isn't one already.
     //
     async function createThread(): Promise<void> {
+        
+        if (threadId.current === undefined) {
+            //
+            // Try and reload from local storage.
+            //
+            const storedThreadId = localStorage.getItem("threadId");
+            if (storedThreadId) {
+                threadId.current = storedThreadId;
+                await updateMessages();
+            }
+        }
+
+
         if (threadId.current !== undefined) {
             // Already have a thread.
             return; 
@@ -36,6 +49,12 @@ export function App() {
         //
         const { data } = await axios.post(`${BASE_URL}/chat/new`);
         threadId.current = data.threadId;
+
+        //
+        // Save the thread id in local storage.
+        //
+        localStorage.setItem("threadId", threadId.current);
+        
         mixpanel.identify(data.threadId);
     }
 
@@ -75,7 +94,7 @@ export function App() {
 
         const { data } = await axios.post(`${BASE_URL}/chat/list`, {
             threadId: threadId.current,
-            runId: runId!,
+            runId: runId,
         });
 
         const { messages, status } = data;
@@ -83,11 +102,13 @@ export function App() {
         messages.reverse(); // Reverse so the newest messages are at the bottom.
         setMessages(messages);
 
-        if (status === "completed") {
-            setTimeout(() => {
-                // The run has finished.
-                setRunId(undefined);
-            }, 5000); // Give it some time to finish up.
+        if (runId) {
+            if (status === "completed") {
+                setTimeout(() => {
+                    // The run has finished.
+                    setRunId(undefined);
+                }, 5000); // Give it some time to finish up.
+            }
         }
     }
 
