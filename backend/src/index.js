@@ -73,10 +73,16 @@ app.post(`/chat/list`, async (req, res) => {
     const { threadId, runId } = req.body;
 
     const messages = await openai.beta.threads.messages.list(threadId);
-    const run = await openai.beta.threads.runs.retrieve(threadId, runId);
+
+    let status = undefined;
+    if (runId) {
+        const run = await openai.beta.threads.runs.retrieve(threadId, runId);
+        status = run.status;
+    }   
+
     res.json({
         messages: messages.data,
-        status: run.status,
+        status,
     });
 });
 
