@@ -242,7 +242,8 @@ export function App() {
                 {/* <!-- Heading --> */}
                 <div className="flex flex-col space-y-1.5 pb-6">
                     <h2 className="font-semibold text-lg tracking-tight">Ask questions about Ashley Davis</h2>
-                    <p className="text-sm text-[#6b7280] leading-3">Powered by Open AI and the CV of Ashley Davis</p>
+                    <p className="text-xs text-[#6b7280] leading-3">Powered by Open AI (ChatGPT) and the CV of Ashley Davis</p>
+                    <p className="text-xs text-[#6b7280] leading-3">Answers are probabalistic and can be wrong. ChatGPT isn't intelligent.</p>
                 </div>
 
                 {/* <!-- Chat Container --> */}
