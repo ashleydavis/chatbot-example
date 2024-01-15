@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const OpenAI = require("openai");
+const { db } = require("./db");
 
 const app = express();
 app.use(cors());
@@ -59,6 +60,14 @@ app.post(`/chat/send`, async (req, res) => {
             assistant_id: ASSISTANT_ID,
         }
     );
+
+    await db.collection("messages").insertOne({
+        addedDate: new Date(),
+        threadId,
+        runId: run.id,
+        text,
+        ip: req.ip,
+    });
     
     res.json({
         runId: run.id,
@@ -74,6 +83,23 @@ app.post(`/chat/list`, async (req, res) => {
 
     const messages = await openai.beta.threads.messages.list(threadId);
     const run = await openai.beta.threads.runs.retrieve(threadId, runId);
+
+    await db.collection("threads").updateOne(
+        { _id: threadId },
+        {
+            $set: {
+                updateDate: new Date(),
+                messages: messages,
+                status: run.status,
+                ip: req.ip,
+            },
+            $setOnInsert: {
+                startDate: new Date(),
+            },
+        },
+        { upsert: true }
+    );
+
     res.json({
         messages: messages.data,
         status: run.status,
