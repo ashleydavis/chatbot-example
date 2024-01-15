@@ -3,11 +3,14 @@ import { ThreadMessage } from "openai/resources/beta/threads/messages/messages";
 import Markdown from 'markdown-to-jsx';
 import { Cv } from "./cv";
 import axios from "axios";
+import mixpanel from 'mixpanel-browser';
 
 const BASE_URL = process.env.BASE_URL;
 if (!BASE_URL) {
     throw new Error("Missing BASE_URL environment variable.");
 }
+
+mixpanel.init("3a2392670addfa97de7d71de37684c94", { track_pageview: true });
 
 export function App() {
 
@@ -33,6 +36,7 @@ export function App() {
         //
         const { data } = await axios.post(`${BASE_URL}/chat/new`);
         threadId.current = data.threadId;
+        mixpanel.identify(data.threadId);
     }
 
     //
