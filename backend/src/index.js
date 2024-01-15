@@ -2,9 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const OpenAI = require("openai");
 const { db } = require("./db");
+const requestIp = require("request-ip");
 
 const app = express();
 app.use(cors());
+app.use(requestIp.mw());
 app.use(express.json());
 
 const port = process.env.PORT || 3000;
@@ -66,7 +68,7 @@ app.post(`/chat/send`, async (req, res) => {
         threadId,
         runId: run.id,
         text,
-        ip: req.ip,
+        ip: req.clientIp,
     });
     
     res.json({
@@ -91,7 +93,7 @@ app.post(`/chat/list`, async (req, res) => {
                 updateDate: new Date(),
                 messages: messages,
                 status: run.status,
-                ip: req.ip,
+                ip: req.clientIp,
             },
             $setOnInsert: {
                 startDate: new Date(),
