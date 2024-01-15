@@ -17,6 +17,7 @@ export function App() {
     const [messages, setMessages] = useState<ThreadMessage[]>([]);
     const [message, setMessage] = useState<string>("");
     const [chatbotVisible, setChatbotVisible] = useState<boolean>(true);
+    const [showInfo, setShowInfo] = useState<boolean>(true);
 
     //
     // Creates a new message thread, if there isn't one already.
@@ -172,11 +173,12 @@ export function App() {
 
     return (
         <div>
-            <div
+            {showInfo && <div
                 style={{
                     boxShadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)",
                     maxHeight: "80%",
                     maxWidth: "80%",
+                    zIndex: 1000,
                 }}
                 className="flex flex-col fixed top-[50px] right-0 mr-4 bg-gray-100 p-6 rounded-lg border border-[#e5e7eb] w-[440px]"
                 >
@@ -186,7 +188,27 @@ export function App() {
 
                 <p className="pt-2 font-bold">Stay tuned, a video and blog post describing how to build this chatbot is coming soon!</p>
 
-            </div>
+                <div 
+                    className="absolute top-[10px] right-[10px] cursor-pointer"
+                    onClick={() => setShowInfo(false)}
+                    >
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M18 6L6 18M6 6l12 12"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>                   
+                </div>
+            </div>}
 
             {chatbotVisible && <div
                 style={{
@@ -194,7 +216,7 @@ export function App() {
                     maxHeight: "80%",
                     maxWidth: "80%",
                 }}
-                className="flex flex-col fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[440px] h-[634px]"
+                className="flex flex-col fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 pt-2 rounded-lg border border-[#e5e7eb] w-[440px] h-[600px]"
                 >
 
                 {/* <!-- Heading --> */}
