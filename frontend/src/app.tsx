@@ -172,6 +172,22 @@ export function App() {
 
     return (
         <div>
+            <div
+                style={{
+                    boxShadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)",
+                    maxHeight: "80%",
+                    maxWidth: "80%",
+                }}
+                className="flex flex-col fixed top-[50px] right-0 mr-4 bg-gray-100 p-6 rounded-lg border border-[#e5e7eb] w-[440px]"
+                >
+                <p className="text-lg">Hello! This is the resume of Ashley Davis.</p>
+                <p className="pt-2">The CV on the left was exported from Google Docs.</p>
+                <p>The chatbot below is implemented using TypeScript, React and the Open AI API, through a Node.js backend. </p>
+
+                <p className="pt-2 font-bold">Stay tuned, a video and blog post describing how to build this chatbot is coming soon!</p>
+
+            </div>
+
             {chatbotVisible && <div
                 style={{
                     boxShadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)",
