@@ -200,14 +200,14 @@ export function App() {
                     maxWidth: "80%",
                     zIndex: 1000,
                 }}
-                className="flex flex-col fixed top-[50px] right-0 mr-4 bg-gray-100 p-6 rounded-lg border border-[#e5e7eb] w-[440px]"
+                className="flex flex-col fixed top-[50px] right-0 mr-4 bg-gray-50 p-6 rounded-lg border border-[#e5e7eb] w-[440px]"
                 >
                 <p className="text-lg">Hello! This is the resume of Ashley Davis.</p>
                 <p className="pt-2">The CV on the left was exported from Google Docs.</p>
                 <p>The chatbot below is implemented using TypeScript, React and the Open AI API, through a Node.js backend. </p>
 
                 <a 
-                    className="mt-1 text-sm font-blue-600 font-medium underline"
+                    className="mt-3 text-sm text-blue-600 font-medium underline"
                     href="https://cv.codecapers.com.au/" 
                     target="_blank"
                     >
@@ -215,7 +215,7 @@ export function App() {
                 </a>
 
                 <a 
-                    className="text-sm font-blue-600 font-medium underline"
+                    className="mt-1 text-sm text-blue-600 font-medium underline"
                     href="https://www.youtube.com/watch?v=RY_B1bmSvs0" 
                     target="_blank"
                     >
@@ -250,7 +250,7 @@ export function App() {
                     maxHeight: "80%",
                     maxWidth: "80%",
                 }}
-                className="flex flex-col fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 pt-2 rounded-lg border border-[#e5e7eb] w-[440px] h-[600px]"
+                className="flex flex-col fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-gray-50 p-6 pt-2 rounded-lg border border-[#e5e7eb] w-[440px] h-[600px]"
                 >
 
                 {/* <!-- Heading --> */}
