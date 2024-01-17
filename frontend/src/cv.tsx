@@ -222,7 +222,7 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://devchat.tv/js-jabber/data-wrangling-in-javascript-with-ashley-davis-jsj-484/"
+                            href="https://topenddevs.com/podcasts/javascript-jabber/episodes/data-wrangling-in-javascript-with-ashley-davis-jsj-484"
                             target="_blank"
                         >
                             JavaScript Jabber
@@ -262,7 +262,7 @@ export function Cv() {
                             The Linux Foundation
                         </a>
                     </span>
-                    <span>, &nbsp;</span>
+                    <span>, </span>
                     <span className="c7">
                         <a
                             className="c0"
@@ -272,7 +272,7 @@ export function Cv() {
                             InfoQ
                         </a>
                     </span>
-                    <span>,</span>
+                    <span>, </span>
                     <span className="c7">
                         <a
                             className="c0"
@@ -282,7 +282,7 @@ export function Cv() {
                             Manning
                         </a>
                     </span>
-                    <span>,</span>
+                    <span>, </span>
                     <span className="c7">
                         <a
                             className="c0"
@@ -314,7 +314,7 @@ export function Cv() {
                             GitHub
                         </a>
                     </span>
-                    <span>&nbsp;and</span>
+                    <span> and </span>
                     <span className="c7">
                         <a
                             className="c0"
