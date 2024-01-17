@@ -208,7 +208,7 @@ export function App() {
 
                 <a 
                     className="mt-3 text-sm text-blue-600 font-medium underline"
-                    href="https://cv.codecapers.com.au/" 
+                    href="https://github.com/ashleydavis/chatbot-example" 
                     target="_blank"
                     >
                     See the code on GitHub
@@ -219,7 +219,7 @@ export function App() {
                     href="https://www.youtube.com/watch?v=RY_B1bmSvs0" 
                     target="_blank"
                     >
-                    Watch the video and learn how to make this chatbot
+                    Learn how to make this chatbot
                 </a>
 
                 <div 
