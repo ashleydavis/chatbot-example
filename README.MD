@@ -4,6 +4,16 @@ An example of building a Chatbot with the Open AI API.
 
 If you like this project, please star this repo and [support my work](https://www.codecapers.com.au/about#support-my-work)
 
+## Live demo
+
+Find a live demo of the chatbot here:
+https://cv.codecapers.com.au/
+
+## Video overview
+
+I've made a video to show how to make a chatbot like this:
+https://www.youtube.com/watch?v=RY_B1bmSvs0
+
 ## Original UI code
 
 https://tailwindcomponents.com/component/ai-chatbot
