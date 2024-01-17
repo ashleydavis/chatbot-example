@@ -19,7 +19,8 @@ export function Cv() {
                 <span className="c7">
                     <a
                         className="c0"
-                        href="https://www.google.com/url?q=http://www.codecapers.com.au/&sa=D&source=editors&ust=1705149026152994&usg=AOvVaw1Z3n0RpV6S2jJyklFvbpxM"
+                        href="https://codecapers.com.au/"
+                        target="_blank"
                     >
                         www.codecapers.com.au
                     </a>
@@ -29,7 +30,8 @@ export function Cv() {
                 <span className="c7">
                     <a
                         className="c0"
-                        href="https://www.google.com/url?q=https://www.linkedin.com/in/ashleydavis75/&sa=D&source=editors&ust=1705149026153417&usg=AOvVaw0YQY7rbr4WEZmEYqAB6u9g"
+                        href="https://www.linkedin.com/in/ashleydavis75/"
+                        target="_blank"
                     >
                         Linkedin
                     </a>
@@ -38,7 +40,8 @@ export function Cv() {
                 <span className="c7">
                     <a
                         className="c0"
-                        href="https://www.google.com/url?q=http://youtube.com/c/codecapers&sa=D&source=editors&ust=1705149026153604&usg=AOvVaw1qIYLCJTsp6vsWecoluD3i"
+                        href="https://www.youtube.com/c/codecapers"
+                        target="_blank"
                     >
                         YouTube
                     </a>
@@ -47,7 +50,8 @@ export function Cv() {
                 <span className="c7">
                     <a
                         className="c0"
-                        href="https://www.google.com/url?q=https://github.com/ashleydavis&sa=D&source=editors&ust=1705149026153787&usg=AOvVaw2U4oHv5nGeaLlqoN95QnPB"
+                        href=" https://github.com/ashleydavis/"
+                        target="_blank"
                     >
                         GitHub
                     </a>
@@ -56,7 +60,8 @@ export function Cv() {
                 <span className="c7">
                     <a
                         className="c0"
-                        href="https://www.google.com/url?q=https://www.data-forge-notebook.com/&sa=D&source=editors&ust=1705149026153965&usg=AOvVaw1AxnTknLM4ALpb8BRpWpZq"
+                        href="https://data-forge-notebook.com"
+                        target="_blank"
                     >
                         Data-Forge Notebook
                     </a>
@@ -125,7 +130,8 @@ export function Cv() {
                 <span className="c7">
                     <a
                         className="c0"
-                        href="https://www.google.com/url?q=https://rapidfullstackdevelopment.com/&sa=D&source=editors&ust=1705149026155303&usg=AOvVaw0S5eWL4--Ht77-Z0vxptHx"
+                        href="https://rapidfullstackdevelopment.com"
+                        target="_blank"                        
                     >
                         Rapid Fullstack Development
                     </a>
@@ -143,7 +149,8 @@ export function Cv() {
                 <span className="c7">
                     <a
                         className="c0"
-                        href="https://www.google.com/url?q=https://bootstrapping-microservices.com/&sa=D&source=editors&ust=1705149026155802&usg=AOvVaw2lo8FUrW2EiKp9pFBjc8qb"
+                        href="https://bootstrapping-microservices.com"
+                        target="_blank"
                     >
                         Bootstrapping Microservices
                     </a>
@@ -160,7 +167,8 @@ export function Cv() {
                 <span className="c7">
                     <a
                         className="c0"
-                        href="https://www.google.com/url?q=http://bit.ly/2t2cJu2&sa=D&source=editors&ust=1705149026156266&usg=AOvVaw3weWIxbw9_m3V8uu4SlVu0"
+                        href="http://bit.ly/2t2cJu2"
+                        target="_blank"
                     >
                         Data Wrangling with JavaScript
                     </a>
@@ -182,7 +190,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://www.youtube.com/playlist?list%3DPLQrB0_KjTmHjhwKC-KRfotObNyBXmYLlD&sa=D&source=editors&ust=1705149026156861&usg=AOvVaw1Lh6dyc9eF4qQbi1lAi4H_"
+                            href="https://www.youtube.com/playlist?list=PLQrB0_KjTmHjhwKC-KRfotObNyBXmYLlD"
+                            target="_blank"
                         >
                             BrisJS
                         </a>
@@ -191,7 +200,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DIK23SkL4Mms&sa=D&source=editors&ust=1705149026157115&usg=AOvVaw2N0xy5mFVA8qE9zKWiitGI"
+                            href="https://www.youtube.com/watch?v=IK23SkL4Mms"
+                            target="_blank"
                         >
                             Microservices Conference
                         </a>
@@ -200,7 +210,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://www.youtube.com/c/codecapers&sa=D&source=editors&ust=1705149026157356&usg=AOvVaw2UQbQC26pRHtVPpth3A9P9"
+                            href="https://www.youtube.com/c/codecapers"
+                            target="_blank"
                         >
                             YouTube
                         </a>
@@ -211,7 +222,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://devchat.tv/js-jabber/data-wrangling-in-javascript-with-ashley-davis-jsj-484/&sa=D&source=editors&ust=1705149026157764&usg=AOvVaw3KnMSe0C4x1OHLILhCQTZ-"
+                            href="https://devchat.tv/js-jabber/data-wrangling-in-javascript-with-ashley-davis-jsj-484/"
+                            target="_blank"
                         >
                             JavaScript Jabber
                         </a>
@@ -221,7 +233,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://podcasts.apple.com/us/podcast/the-monolith-microservices-spectrum/id1602572955?i%3D1000600902188&sa=D&source=editors&ust=1705149026158088&usg=AOvVaw0Cnq8spMVWUT_swprFFcM0"
+                            href="https://podcasts.apple.com/us/podcast/the-monolith-microservices-spectrum/id1602572955?i=1000600902188"
+                            target="_blank"
                         >
                             Apple
                         </a>
@@ -231,7 +244,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZXNvbmF0ZXJlY29yZGluZ3MuY29tL3NvZnR3YXJlLXVuc2NyaXB0ZWQ/episode/MGRlMjNlMzQtYmJjMi00MDNkLTllZDEtMWIxNjRiNTFlMWE5?sa%3DX%26ved%3D0CAUQkfYCahcKEwiQwav2paj9AhUAAAAAHQAAAAAQAQ&sa=D&source=editors&ust=1705149026158536&usg=AOvVaw3UpxJGi8N-2o52nIOeUV_h"
+                            href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZXNvbmF0ZXJlY29yZGluZ3MuY29tL3NvZnR3YXJlLXVuc2NyaXB0ZWQ/episode/MGRlMjNlMzQtYmJjMi00MDNkLTllZDEtMWIxNjRiNTFlMWE5?sa=X&ved=0CAUQkfYCahcKEwiQwav2paj9AhUAAAAAHQAAAAAQAQ"
+                            target="_blank"
                         >
                             Google
                         </a>
@@ -242,16 +256,18 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://training.linuxfoundation.org/announcements/scaling-microservices-on-kubernetes/&sa=D&source=editors&ust=1705149026158964&usg=AOvVaw1D1YDGO2onoXxXcc8XhnjR"
+                            href="https://training.linuxfoundation.org/announcements/scaling-microservices-on-kubernetes/"
+                            target="_blank"
                         >
-                            the Linux Foundation
+                            The Linux Foundation
                         </a>
                     </span>
                     <span>, &nbsp;</span>
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://www.infoq.com/articles/monolith-versus-microservices/&sa=D&source=editors&ust=1705149026159236&usg=AOvVaw2AQhh6J_eUrw7Q80JCrA-e"
+                            href="https://www.infoq.com/articles/monolith-versus-microservices/"
+                            target="_blank"
                         >
                             InfoQ
                         </a>
@@ -260,7 +276,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://freecontent.manning.com/refactoring-to-microservices/&sa=D&source=editors&ust=1705149026159500&usg=AOvVaw0YQbtQ4hulzMJjqLJegOt9"
+                            href="https://freecontent.manning.com/refactoring-to-microservices/"
+                            target="_blank"
                         >
                             Manning
                         </a>
@@ -269,7 +286,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://blog.logrocket.com/author/ashleydavis/&sa=D&source=editors&ust=1705149026159743&usg=AOvVaw0rjRxlgVBktpK-XHZ_S5br"
+                            href="https://blog.logrocket.com/author/ashleydavis/"
+                            target="_blank"
                         >
                             Log Rocket
                         </a>
@@ -278,7 +296,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://www.codecapers.com.au/&sa=D&source=editors&ust=1705149026159974&usg=AOvVaw2yI7BpopqVgd8-MCJatII5"
+                            href="https://www.codecapers.com.au/"
+                            target="_blank"
                         >
                             my blog
                         </a>
@@ -290,7 +309,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://github.com/ashleydavis&sa=D&source=editors&ust=1705149026160371&usg=AOvVaw3NGIP70RRCsL6yUvx4SJ9h"
+                            href="https://github.com/ashleydavis"
+                            target="_blank"
                         >
                             GitHub
                         </a>
@@ -299,7 +319,8 @@ export function Cv() {
                     <span className="c7">
                         <a
                             className="c0"
-                            href="https://www.google.com/url?q=https://github.com/data-forge-notebook/data-forge-notebook/&sa=D&source=editors&ust=1705149026160627&usg=AOvVaw0LFciv7n55C-X3TIfLTkiL"
+                            href="https://github.com/data-forge-notebook/data-forge-notebook/"
+                            target="_blank"
                         >
                             Data-Forge Notebook
                         </a>
