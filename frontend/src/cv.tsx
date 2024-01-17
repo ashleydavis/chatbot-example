@@ -196,7 +196,7 @@ export function Cv() {
                             BrisJS
                         </a>
                     </span>
-                    <span>,</span>
+                    <span>, </span>
                     <span className="c7">
                         <a
                             className="c0"
@@ -304,8 +304,7 @@ export function Cv() {
                     </span>
                 </li>
                 <li className="c2 li-bullet-0">
-                    <span>O</span>
-                    <span>pen source code: </span>
+                    <span>Open source code: </span>
                     <span className="c7">
                         <a
                             className="c0"
