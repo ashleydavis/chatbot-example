@@ -219,7 +219,7 @@ export function App() {
                     href="https://www.youtube.com/watch?v=RY_B1bmSvs0" 
                     target="_blank"
                     >
-                    What the video and learn how to make this chatbot
+                    Watch the video and learn how to make this chatbot
                 </a>
 
                 <div 
