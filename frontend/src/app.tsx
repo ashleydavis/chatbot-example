@@ -206,7 +206,9 @@ export function App() {
                 <p className="pt-2">The CV on the left was exported from Google Docs.</p>
                 <p>The chatbot below is implemented using TypeScript, React and the Open AI API, through a Node.js backend. </p>
 
-                <p className="pt-2 font-bold">Stay tuned, a video and blog post describing how to build this chatbot is coming soon!</p>
+                <a href="https://cv.codecapers.com.au/" target="_blank">See the code on GitHub</a>
+
+                <a href="https://www.youtube.com/watch?v=RY_B1bmSvs0" target="_blank">What the video and learn how to make this chatbot</a>
 
                 <div 
                     className="absolute top-[10px] right-[10px] cursor-pointer"
