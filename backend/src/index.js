@@ -23,7 +23,6 @@ if (!ASSISTANT_ID) {
 
 const openai = new OpenAI({
     apiKey: OPENAI_API_KEY,
-    dangerouslyAllowBrowser: true,
 });
 
 app.get('/', (req, res) => {
