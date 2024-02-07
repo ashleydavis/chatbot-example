@@ -349,13 +349,30 @@ export function Cv() {
             <h1 className="c8 c20" id="h.aynwjzpn5myj">
                 <span className="c22">EXPERIENCE</span>
             </h1>
+            <h2 className="c5" id="h.r7jl2wek8t7s">
+                <span>Data-Forge Notebook, Brisbane</span>
+                <span className="c15 c14">&nbsp;- Owner / Fullstack developer</span>
+            </h2>
+            <p className="c12">
+                <span className="c4 c6">July 2018 - PRESENT</span>
+            </p>
+            <ul className="c1 lst-kix_71cy10c6bo5c-0">
+                <li className="c2 li-bullet-0">
+                    <span>Development</span>
+                    <span>&nbsp;</span>
+                    <span className="c14">for Windows, MacOS and Linux </span>
+                    <span>using </span>
+                    <span className="c14">Electron, TypeScript</span>
+                    <span>, </span>
+                    <span className="c3">React.</span>
+                </li>
+            </ul>
             <h2 className="c5" id="h.lubmmid7n89c">
                 <span>Deployable, Brisbane</span>
                 <span className="c14 c15">&nbsp;- CTO / Fullstack developer</span>
             </h2>
             <p className="c12">
-                <span className="c10">April </span>
-                <span className="c4 c6">2023 - PRESENT</span>
+                <span className="c4 c6">April 2023 - January 2024</span>
             </p>
             <ul className="c1 lst-kix_71cy10c6bo5c-0 start">
                 <li className="c2 li-bullet-0">
@@ -386,24 +403,6 @@ export function Cv() {
                 </li>
                 <li className="c2 li-bullet-0">
                     <span>Managing the development team.</span>
-                </li>
-            </ul>
-            <h2 className="c5" id="h.r7jl2wek8t7s">
-                <span>Data-Forge Notebook, Brisbane</span>
-                <span className="c15 c14">&nbsp;- Owner / Fullstack developer</span>
-            </h2>
-            <p className="c12">
-                <span className="c4 c6">July 2018 - PRESENT</span>
-            </p>
-            <ul className="c1 lst-kix_71cy10c6bo5c-0">
-                <li className="c2 li-bullet-0">
-                    <span>Development</span>
-                    <span>&nbsp;</span>
-                    <span className="c14">for Windows, MacOS and Linux </span>
-                    <span>using </span>
-                    <span className="c14">Electron, TypeScript</span>
-                    <span>, </span>
-                    <span className="c3">React.</span>
                 </li>
             </ul>
             <h2 className="c5 c24" id="h.qazz5brkukf6">
